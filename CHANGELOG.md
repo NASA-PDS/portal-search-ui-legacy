@@ -1,73 +1,73 @@
 # Changelog
 
-## [release/2.5.0](https://github.com/NASA-PDS/search-ui-legacy/tree/release/2.5.0) (2025-12-16)
+## [v2.5.0](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.5.0) (2025-12-16)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.4.3...release/2.5.0)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.4.3...v2.5.0)
 
-## [v2.4.3](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.4.3) (2025-09-25)
+## [v2.4.3](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.4.3) (2025-09-25)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.4.1...v2.4.3)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.4.1...v2.4.3)
 
 **Defects:**
 
-- Bug with XSS vulnerability [\#59](https://github.com/NASA-PDS/search-ui-legacy/issues/59) [[s.high](https://github.com/NASA-PDS/search-ui-legacy/labels/s.high)]
+- Bug with XSS vulnerability [\#59](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/59) [[s.high](https://github.com/NASA-PDS/portal-search-ui-legacy/labels/s.high)]
 
-## [v2.4.1](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.4.1) (2025-05-30)
+## [v2.4.1](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.4.1) (2025-05-30)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.4.0...v2.4.1)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.4.0...v2.4.1)
 
-## [v2.4.0](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.4.0) (2025-05-28)
+## [v2.4.0](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.4.0) (2025-05-28)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.3.0...v2.4.0)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.3.0...v2.4.0)
 
 **Other closed issues:**
 
-- Prevent potential DoS attack by handling exceptions in search-ui-legacy [\#49](https://github.com/NASA-PDS/search-ui-legacy/issues/49)
+- Prevent potential DoS attack by handling exceptions in search-ui-legacy [\#49](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/49)
 
-## [v2.3.0](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.3.0) (2024-11-25)
+## [v2.3.0](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.3.0) (2024-11-25)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.2.1...v2.3.0)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.2.1...v2.3.0)
 
 **Defects:**
 
-- `Too many open files` error for servlet [\#40](https://github.com/NASA-PDS/search-ui-legacy/issues/40)
-- Faceting no longer works since XssUtils was introduced [\#35](https://github.com/NASA-PDS/search-ui-legacy/issues/35) [[s.critical](https://github.com/NASA-PDS/search-ui-legacy/labels/s.critical)]
+- `Too many open files` error for servlet [\#40](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/40)
+- Faceting no longer works since XssUtils was introduced [\#35](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/35) [[s.critical](https://github.com/NASA-PDS/portal-search-ui-legacy/labels/s.critical)]
 
-## [v2.2.1](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.2.1) (2024-07-26)
+## [v2.2.1](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.2.1) (2024-07-26)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.2.0...v2.2.1)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.2.0...v2.2.1)
 
 **Other closed issues:**
 
-- Fix code scanning alert - Minimize error information logged back to website [\#32](https://github.com/NASA-PDS/search-ui-legacy/issues/32)
+- Fix code scanning alert - Minimize error information logged back to website [\#32](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/32)
 
-## [v2.2.0](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.2.0) (2024-06-10)
+## [v2.2.0](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.2.0) (2024-06-10)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.1.6...v2.2.0)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.1.6...v2.2.0)
 
 **Defects:**
 
-- Fix code scanning alert per Log Injection [\#30](https://github.com/NASA-PDS/search-ui-legacy/issues/30) [[s.critical](https://github.com/NASA-PDS/search-ui-legacy/labels/s.critical)]
+- Fix code scanning alert per Log Injection [\#30](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/30) [[s.critical](https://github.com/NASA-PDS/portal-search-ui-legacy/labels/s.critical)]
 
-## [v2.1.6](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.1.6) (2024-04-11)
+## [v2.1.6](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.1.6) (2024-04-11)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/v2.1.0...v2.1.6)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/v2.1.0...v2.1.6)
 
 **Improvements:**
 
-- Upgrade Keyword Search and dependencies to support Harvest/Registry upgrades [\#1](https://github.com/NASA-PDS/search-ui-legacy/issues/1)
+- Upgrade Keyword Search and dependencies to support Harvest/Registry upgrades [\#1](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/1)
 
 **Defects:**
 
-- NullPointerException when `wt` is not provided [\#7](https://github.com/NASA-PDS/search-ui-legacy/issues/7) [[s.high](https://github.com/NASA-PDS/search-ui-legacy/labels/s.high)]
+- NullPointerException when `wt` is not provided [\#7](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/7) [[s.high](https://github.com/NASA-PDS/portal-search-ui-legacy/labels/s.high)]
 
 **Other closed issues:**
 
-- Create new middleware layer to interface with Solr [\#5](https://github.com/NASA-PDS/search-ui-legacy/issues/5)
+- Create new middleware layer to interface with Solr [\#5](https://github.com/NASA-PDS/portal-search-ui-legacy/issues/5)
 
-## [v2.1.0](https://github.com/NASA-PDS/search-ui-legacy/tree/v2.1.0) (2023-10-05)
+## [v2.1.0](https://github.com/NASA-PDS/portal-search-ui-legacy/tree/v2.1.0) (2023-10-05)
 
-[Full Changelog](https://github.com/NASA-PDS/search-ui-legacy/compare/aeca3206a0fae3d911ce6f23d68e84656a6074cf...v2.1.0)
+[Full Changelog](https://github.com/NASA-PDS/portal-search-ui-legacy/compare/aeca3206a0fae3d911ce6f23d68e84656a6074cf...v2.1.0)
 
 
 
