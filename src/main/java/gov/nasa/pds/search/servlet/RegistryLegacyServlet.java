@@ -43,8 +43,8 @@ public class RegistryLegacyServlet extends HttpServlet {
   /** Solr Collection name */
   private String solrCollection;
 
-  /** Solr Request Handler */
-  private String solrRequestHandler;
+  /** Default Solr Request Handler, used when a request does not select an allowed one. */
+  private String defaultSolrRequestHandler;
 
   private static List<String> SOLR_QUERY_PARAMS =
       new ArrayList<String>(
@@ -110,9 +110,9 @@ public class RegistryLegacyServlet extends HttpServlet {
       this.solrCollection = SOLR_COLLECTION;
     }
 
-    this.solrRequestHandler = servletConfig.getInitParameter("solrRequestHandler");
-    if (this.solrRequestHandler == null) {
-      this.solrRequestHandler = DEFAULT_REQUEST_HANDLER;
+    this.defaultSolrRequestHandler = servletConfig.getInitParameter("solrRequestHandler");
+    if (this.defaultSolrRequestHandler == null) {
+      this.defaultSolrRequestHandler = DEFAULT_REQUEST_HANDLER;
     }
 
     LOG.debug("Solr Server URL: {}", this.solrServerUrl);
@@ -145,8 +145,10 @@ public class RegistryLegacyServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) {
     try {
       String queryString = getQueryString(request);
+      String solrRequestHandler = resolveRequestHandler(
+          request.getParameter(REQUEST_HANDLER_PARAM), this.defaultSolrRequestHandler);
       String url = String.format("%s/%s/%s?%s", this.solrServerUrl, this.solrCollection,
-              this.solrRequestHandler, queryString);
+              solrRequestHandler, queryString);
 
       ClassicHttpRequest httpGet = ClassicRequestBuilder.get(url).build();
       String resultContent = null;
@@ -211,6 +213,21 @@ public class RegistryLegacyServlet extends HttpServlet {
   }
 
   /**
+   * Choose the Solr request handler for a single request. The result depends only on the
+   * arguments, so one request never affects the handler used by another.
+   *
+   * @param requestedHandler The value of the request's qt parameter, or null if absent.
+   * @param defaultHandler The configured handler used when qt is absent or not allowed.
+   * @return The request handler to use.
+   */
+  static String resolveRequestHandler(String requestedHandler, String defaultHandler) {
+    if (requestedHandler != null && REQUEST_HANDLERS.contains(requestedHandler)) {
+      return requestedHandler;
+    }
+    return defaultHandler;
+  }
+
+  /**
    * Generate query string from subset of allowable query parameters
    * 
    * 
@@ -225,13 +242,10 @@ public class RegistryLegacyServlet extends HttpServlet {
       Enumeration<?> parameterNames = request.getParameterNames();
       while (parameterNames.hasMoreElements()) {
         String paramKey = String.valueOf(parameterNames.nextElement());
-        String value = "";
-        
+
         if (paramKey.equals(REQUEST_HANDLER_PARAM)) {
-          value = request.getParameter(REQUEST_HANDLER_PARAM);
-          if (REQUEST_HANDLERS.contains(value)) {
-            this.solrRequestHandler = value;
-          }
+          // Selects the request handler; see resolveRequestHandler. Not forwarded to Solr.
+          continue;
         } else if (SOLR_QUERY_PARAMS.contains(paramKey)) {
           queryString.append(appendQueryParameters(paramKey, request.getParameterValues(paramKey)));
         } else if (paramKey.endsWith(".facet.prefix")
